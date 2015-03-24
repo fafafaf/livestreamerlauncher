@@ -42,7 +42,7 @@ namespace LiveStreamerLauncher
         public string display_name { get; set; }
         public string game { get; set; }
         public string logo { get; set; }
-        public bool mature { get; set; }
+        public bool? mature { get; set; }
         public string status { get; set; }
         public bool partner { get; set; }
         public string url { get; set; }
