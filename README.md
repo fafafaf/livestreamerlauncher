@@ -2,11 +2,11 @@
 
 This programs is a launcher for watching Supreme Commander: Forged Alliance streams on Twitch.
 
-![Launcher](https://bitbucket.org/repo/b97eg6/images/2460762240-Untitled.png)
+![Launcher](https://bitbucket.org/repo/b97eg6/images/1720677617-Untitled.png)
 
 ### Why? ###
 
-I'm too lazy to type the livestreamer command every time I want to watch a stream. 
+I dont like Twitch's flashplayer and I'm too lazy to type the livestreamer command every time I want to watch a stream. 
 
 ### How? ###
 
@@ -18,3 +18,6 @@ The program loads the stream links from [Twitch](http://www.twitch.tv/directory/
 1. start app
 1. select stream
 1. press play
+
+
+## ** [Download](https://bitbucket.org/fafafaf/livestreamerlauncher/downloads) ** ##
