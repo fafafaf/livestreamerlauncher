@@ -14,22 +14,6 @@ namespace LiveStreamerLauncher
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
-            try
-            {
-                using (var webClient = new WebClient())
-                {
-                    var twitch = new JavaScriptSerializer().Deserialize<Twitch>(webClient.DownloadString(url));
-
-                    foreach (var stream in twitch.streams)
-                    {
-                        comboBox1.Items.Add(stream);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex.Message);
-            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -57,6 +41,27 @@ namespace LiveStreamerLauncher
         private void Main_HelpButtonClicked(object sender, System.ComponentModel.CancelEventArgs e)
         {
             new Help().ShowDialog();
+        }
+
+        private void comboBox1_DropDown(object sender, EventArgs e)
+        {
+            try
+            {
+                using (var webClient = new WebClient())
+                {
+                    var twitch = new JavaScriptSerializer().Deserialize<Twitch>(webClient.DownloadString(url));
+
+                    comboBox1.Items.Clear();
+                    foreach (var stream in twitch.streams)
+                    {
+                        comboBox1.Items.Add(stream);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
         }        
     }
 }
