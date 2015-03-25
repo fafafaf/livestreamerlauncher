@@ -62,6 +62,15 @@ namespace LiveStreamerLauncher
             {
                 Debug.WriteLine(ex.Message);
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex != -1)
+            {
+                Stream stream = (Stream)comboBox1.SelectedItem;
+                Process.Start(stream.channel.url + "/chat");
+            }
         }        
     }
 }
