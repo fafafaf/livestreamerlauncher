@@ -51,7 +51,7 @@ namespace LiveStreamerLauncher
         public string name { get; set; }
         public DateTime created_at { get; set; }
         public DateTime updated_at { get; set; }
-        public int delay { get; set; }
+        public int? delay { get; set; }
         public int followers { get; set; }
         public string profile_banner { get; set; }
         public object profile_banner_background_color { get; set; }
